@@ -50,6 +50,8 @@ body {
   color: var(--second-color);
 }
 
+
+
 h1, h2, p {
   margin: 0;
 }
@@ -197,12 +199,14 @@ img {
 .home__social {
   display: flex;
   flex-direction: column;
+   font-family: var(--font-semi);
 }
 .home__social-icon {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
+  font-family: var(--font-semi);
 }
 .home__social-icon:hover {
   color: var(--first-color);
@@ -334,12 +338,16 @@ img {
   margin-bottom: var(--mb-4);
 }
 .contact__button {
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
+    PADDING: 11PX;
+    BORDER-RADIUS: 11PX;
+    display: block;
+    border: 3PX;
+    outline: none;
+    color: #fff;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin-left: auto;
+    background-color: hsl(var(--hue-color), 89%, 60%);
 }
 
 /* ===== FOOTER =====*/
@@ -472,6 +480,38 @@ img {
     column-gap: 2rem;
   }
 }
+
+/* Toggle button style */
+.mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--second-color);
+}
+
+/* Dark mode variables */
+body.dark-mode {
+  --first-color: hsl(224, 89%, 70%);
+  --second-color: #ffffff;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .l-header {
+  background-color: #1e1e1e;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav__link {
+  color: #fff;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+}
+
 @media screen and (min-width: 992px) {
   .bd-grid {
     margin-left: auto;
