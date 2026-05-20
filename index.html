@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="web icon" type="png" href="assets/img/perfil.png">
-
+<link rel="icon" type="image/png" href="assets/img/perfil.png">
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -16,11 +15,17 @@
 </head>
 
 <body>
+    <!--===== LOADING SCREEN =====-->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p id="loading-text"></p>
+    </div>
+
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo">Bhavya s solanki</a>
+                <a href="#" class="nav__logo" style="font-family: 'Dancing Script', cursive; font-size: px;">Bhavya s solanki</a>
             </div>
             <button id="mode-toggle" class="mode-btn">🌙</button>
 
@@ -29,8 +34,12 @@
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
+                    <li class="nav__item"><a href="#achievement" class="nav__link">Achievement</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="assets/cv/Bhavya_Solanki_Resume.pdf"target="_blank"
+                            class="nav__link"><i class='bx bx-download' style="font-size: 24px;"></i></a></li>
+
                 </ul>
             </div>
 
@@ -39,26 +48,30 @@
             </div>
         </nav>
     </header>
-    
-</nav>
+
+    </nav>
 
     <main class="l-main">
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Bhavya</span><br> Student</h1>
+                <h1 class="home__title">
+                    Hi,<br>
+                    I'am <span class="home__title-color" style="color: #05329b;">Bhavya</span><br>
+                    <span id="typed"></span>
+                </h1>
 
-                <a href="https://github.com/BSS2707" target="_blank" class="button" class="home__social-icon"> <i
-                        class='bx bxl-github'> Contact on Github </a></i>
+                <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" target="_blank" class="button">
+                    <i class='bx bx-download'></i> Download Resume </a>
             </div>
 
             <div class="home__social">
                 <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank"
                     class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/bhavya_._007/" target="_blank" class="home__social-icon"><i
+                <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" class="home__social-icon"><i
                         class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61572183992943" target="_blank"
-                    class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/BSS2707/" target="_blank" class="home__social-icon"><i
+                        class='bx bxl-github'></i></a>
             </div>
 
             <div class="home__img">
@@ -71,7 +84,8 @@
                     <g mask="url(#mask0)">
                         <path
                             d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                        <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png" />
+                        <image class="home__blob-img" x="0" y="0" width="479" height="467"
+                            href="assets/img/perfil.png" />
                     </g>
                 </svg>
             </div>
@@ -83,12 +97,17 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="">
+                    <img src="assets/img/about.png" alt="">
                 </div>
 
                 <div>
                     <h2 class="about__subtitle">I'am Bhavya</h2>
-                    <p class="about__text">I am passionate student, educator, and AI developer with skills in HTML, CSS, and creative web design. Alongside technology, I actively engage in sports, chess, and cricket, which enhance my focus, teamwork, and analytical abilities. Always eager to innovate and inspire through education and AI development..</p>
+                    <p class="about__text">I am a passionate AI/ML student, web developer, and educator with skills in
+                        HTML, CSS, creative web design, and an interest in data science. Alongside technology, I
+                        actively engage in sports, chess, and cricket, which strengthen my focus, teamwork, and
+                        analytical thinking. I am always eager to innovate, learn, and inspire through education, AI
+                        development, and modern technology.
+                    </p>
                 </div>
             </div>
         </section>
@@ -100,37 +119,26 @@
             <div class="skills__container bd-grid">
                 <div>
                     <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">Skilled in HTML and CSS with strong creative web design abilities. Passionate about gaming, sports, and competitive strategy. Experienced in chess and cricket, showcasing analytical thinking, teamwork, focus, and problem-solving for both digital and real-world challenges..</p>
+                    <p class="skills__text">I specialize in Python, Machine Learning, AI Development, Data Science, and Streamlit, with strong skills in HTML, CSS, and creative problem solving. My interests extend to chess and cricket, reflecting analytical focus and teamwork. As an educator and leader, I enjoy sharing knowledge, building projects on GitHub, and driving innovation through technology.
+                    </p>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML</span>
+                            <i class='bx bx-code-alt skills__icon'></i>
+                            <span class="skills__name">Web Dev</span>
                         </div>
                         <div class="skills__bar skills__html">
 
                         </div>
                         <div>
-                            <span class="skills__percentage">95%</span>
+                            <span class="skills__percentage">90%</span>
                         </div>
                     </div>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS</span>
+                            <i class='bx bx-brain skills__icon'></i>
+                            <span class="skills__name">AI & ML</span>
                         </div>
                         <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">60%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">Sports</span>
-                        </div>
-                        <div class="skills__bar skills__js">
 
                         </div>
                         <div>
@@ -139,14 +147,26 @@
                     </div>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">Gaming</span>
+                            <i class='bx bx-bar-chart skills__icon'></i>
+                            <span class="skills__name">Data Science</span>
+                        </div>
+                        <div class="skills__bar skills__js">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">70%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bx-crown skills__icon'></i>
+                            <span class="skills__name">Chess</span>
                         </div>
                         <div class="skills__bar skills__ux">
 
                         </div>
                         <div>
-                            <span class="skills__percentage">85%</span>
+                            <span class="skills__percentage">95%</span>
                         </div>
                     </div>
                 </div>
@@ -159,29 +179,67 @@
 
         <!--===== WORK =====-->
         <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
+            <h2 class="section-title">Projects</h2>
 
             <div class="work__container bd-grid">
-                <a href="https://bss2707.github.io/Hanuman/" target="_blank" class="work__img">
-                    <img src="assets/img/work1.jpg" alt="">
+                <a href="https://cricket-match-analyst.streamlit.app/" target="_blank" class="work__img">
+                    <img src="assets/img/work1.jpg" alt="Ai Cricket Match Analyst">
+                    <div class="work__img-overlay" id="overlay-1"> Ai Cricket Match Analyst(Prediction) </div>
                 </a>
-                <a href="https://bhavya7com.wordpress.com/"  target="_blank" class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
-                </a> 
-                <a href="https://bss2707.github.io/BHAVYA-JARVISH/" target="_blank" class="work__img">
-                    <img src="assets/img/work3.jpg" alt="">
+                <a href="https://e-commercechurndataanalysis.streamlit.app/" target="_blank" class="work__img">
+                    <img src="assets/img/work2.jpg" alt="E-Commerce Churn Data Science">
+                    <div class="work__img-overlay" id="overlay-2">E-Commerce Churn Data Science</div>
                 </a>
-                <a href="https://gita-imp-shlokas.netlify.app/" target="_blank" class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
+                <a href="https://ai-health-assistant-chatbot-1.streamlit.app//" target="_blank" class="work__img">
+                    <img src="assets/img/work3.jpg" alt="Ai Health Assistant ChatBot">
+                    <div class="work__img-overlay" id="overlay-3">Ai Health Assistant ChatBot</div>
                 </a>
-                <a href="https://bss2707.github.io/Himalayas/" target="_blank" class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
+                <a href="https://stock-price-prediction-dashboard1.streamlit.app/" target="_blank" class="work__img">
+                    <img src="assets/img/work4.jpg" alt="stock-price-prediction-dashboard1">
+                    <div class="work__img-overlay" id="overlay-4">Stock Price Prediction Dashboard</div>
                 </a>
-                <a href="https://indianfarmservic.github.io/shreebhumiapk/"  target="_blank" class="work__img">
-                    <img src="assets/img/work6.jpg" alt="">
+                <a href="https://svm-supervised-learning.streamlit.app/" target="_blank" class="work__img">
+                    <img src="assets/img/work5.jpg" alt="svm-supervised-learning">
+                    <div class="work__img-overlay" id="overlay-5">svm-supervised-learning</div>
+                </a>
+                <a href="https://kme-unsupervised.streamlit.app/" target="_blank" class="work__img">
+                    <img src="assets/img/work6.jpg" alt="kme-unsupervised">
+                    <div class="work__img-overlay" id="overlay-6">kmeans-unsupervised</div>
                 </a>
             </div>
         </section>
+
+        <!--===== ACHIEVEMENT =====-->
+        <section class="achievement section" id="achievement">
+            <h2 class="section-title">Achievement</h2>
+            <div class="achievement__container bd-grid">
+
+
+
+                <div class="achievement__item">
+                    <h3 class="achievement__title">🥇 First Rank </h3>
+                    <p class="achievement__description">
+                        First rank in Inter College Competition in ChatBot Battle in Python Programming Language in
+                        Vivekanad College.
+                    </p>
+                    <span><a href="https://www.linkedin.com/feed/update/urn:li:activity:7425187393735036928/"
+                            target="_blank">About More</a></span>
+                </div>
+
+
+                <div class="achievement__item">
+                    <h3 class="achievement__title">🥈 Second rank </h3>
+                    <p class="achievement__description">
+                        Second rank in Inter College Competition in DataDrill in Python Programming Language in
+                        C.K.Pithawala College.
+                    </p>
+                    <span><a href="https://www.linkedin.com/feed/update/urn:li:activity:7425183685492105216/"
+                            target="_blank">About More</a></span>
+                </div>
+
+            </div>
+        </section>
+
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
@@ -193,45 +251,368 @@
 
                     <input type="hidden" name="access_key" value="302c0b1c-7ad5-4d6d-b6b9-5640e9d47a75">
                     <input type="text" class="contact__input" placeholder="Enter Your Name" name="name" required>
-                    <input type="email" class="contact__input" placeholder="Enter Your Email"  name="email" required>
-                    <textarea name="message" rows="10"  cols="20" class="contact__input" placeholder="Give  Message "  required></textarea>
+                    <input type="email" class="contact__input" placeholder="Enter Your Email" name="email" required>
+                    <textarea name="message" rows="10" cols="20" class="contact__input" placeholder="Give  Message "
+                        required></textarea>
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                    <button  class="contact__button" type="submit">Submit Form</button>
+                    <input type="submit" value="Submit" class="contact__button">
 
                 </form>
+
             </div>
         </section>
     </main>
+
+    <!--===== CHATBOT WIDGET =====-->
+    <div id="chatbot-widget">
+        <button id="chatbot-toggle" class="chatbot-toggle-btn">
+            <i class='bx bx-chat'></i>
+        </button>
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <h3>Chat with Bhavya</h3>
+                <button id="chatbot-close" class="chatbot-close-btn">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <!-- Menu inside chatbot window (visible when window is open) -->
+            <div id="chatbot-menu" class="chatbot-menu" style="text-align:center; padding:8px 12px;">
+                <div class="chatbot-menu-inner" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+                    <button class="chatbot-menu-btn" data-option="1">1. About</button>
+                    <button class="chatbot-menu-btn" data-option="2">2. Skills</button>
+                    <button class="chatbot-menu-btn" data-option="3">3. Projects</button>
+                    <button class="chatbot-menu-btn" data-option="4">4. Achievements</button>
+                    <button class="chatbot-menu-btn" data-option="5">5. Contact</button>
+                    <button class="chatbot-menu-btn" data-option="6">6. Resume</button>
+                    <button class="chatbot-menu-btn" data-option="7">7. Hire</button>
+                    <button class="chatbot-menu-btn" data-option="8">8. Social</button>
+                    <button class="chatbot-menu-btn" data-option="9">9. Education</button>
+                    <button class="chatbot-menu-btn" data-option="10">10. Interests</button>
+                </div>
+                <div style="margin-top:6px; font-size:14px;">Enter a direct message or a direct number.</div>
+            </div>
+
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="message bot-message">
+                    <p>Hello! I'm Bhavya's AI assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" id="chatbot-input" placeholder="Type your message..." />
+                <button id="chatbot-send" class="chatbot-send-btn">
+                    <i class='bx bx-send'></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!--===== FOOTER =====-->
     <footer class="footer">
         <p class="footer__title">Bhavya S Solanki</p>
         <div class="footer__social">
-            <a href="https://www.youtube.com/@codingwithbhavya777" target="_blank" class="footer__icon"><i
-                    class='bx bxl-youtube'></i></a>
-            <a href="https://www.instagram.com/bhavya_._007/" target="_blank" class="footer__icon"><i
+           <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" class="footer__icon"><i
+                    class='bx bx-download'></i></a>
+            <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" class="footer__icon"><i
                     class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/bhavya_solanki7" target="_blank" class="footer__icon"><i
-                    class='bx bxl-twitter'></i></a>
+            <a href="https://github.com/BSS2707" target="_blank" class="footer__icon"><i
+                    class='bx bxl-github'></i></a>
         </div>
         <p class="footer__copy">&#169; Bhavya s Solanki. All rigths reserved</p>
     </footer>
 
-
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-  const toggleBtn = document.getElementById("mode-toggle");
-  const body = document.body;
+        // Loading screen with signature animation - retry if offline
+        let typedInstance = null;
+        const loadingNameOnly = true;
+        const loadingScreen = document.getElementById('loading-screen');
+        let isOnline = navigator.onLine;
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
-  });
-</script>
+        function startTypingAnimation() {
+            const element = document.getElementById('loading-text');
+            if (!element) return;
+
+            // If internet/Typed.js is blocked, still show the loading name.
+            element.textContent = 'Bhavya Solanki';
+
+            if (typeof Typed === 'undefined') {
+                // Hide loading screen shortly after showing the name
+                setTimeout(() => {
+                    if (loadingScreen) loadingScreen.style.display = 'none';
+                }, 500);
+                return;
+            }
+
+            // If Typed.js exists, use it for type effect
+            if (typedInstance) typedInstance.destroy();
+
+            typedInstance = new Typed(element, {
+                strings: ['Bhavya Solanki'],
+                typeSpeed: 60,
+                backSpeed: 0,
+                backDelay: 200,
+                loop: false,
+                fadeOut: false,
+                onComplete: function() {
+                    if (loadingScreen) loadingScreen.style.display = 'none';
+                }
+            });
+        }
+
+        // Monitor network connectivity
+        window.addEventListener('online', function() {
+            isOnline = true;
+            console.log('Connected to internet - will hide loading screen');
+            // Hide loading screen after connection
+            setTimeout(() => {
+                    if (loadingScreen) {
+                        loadingScreen.style.display = 'none';
+                        loadingScreen.style.opacity = '0';
+                        loadingScreen.style.pointerEvents = 'none';
+                }
+            }, 1000);
+        });
+
+        window.addEventListener('offline', function() {
+            isOnline = false;
+            console.log('Lost internet connection - keeping loading animation');
+            // Show loading screen and restart animation
+            if (loadingScreen) {
+                loadingScreen.style.display = 'flex';
+                loadingScreen.style.opacity = '1';
+                loadingScreen.style.pointerEvents = 'auto';
+                startTypingAnimation();
+            }
+        });
+
+        // Initial load
+        window.addEventListener('load', function() {
+            if (isOnline) {
+                // Hide loading screen instantly if online
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
+            } else {
+                // Keep loading screen if offline
+                console.log('Offline - keeping loading animation');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'flex';
+                }
+                startTypingAnimation();
+            }
+        });
+
+        // Start animation when Typed.js loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startTypingAnimation);
+        } else {
+            startTypingAnimation();
+        }
+
+        // Fallback: try after a short delay
+        setTimeout(startTypingAnimation, 500);
+    </script>
+
+    <script>
+        // Dark mode toggle
+        const toggleBtn = document.getElementById("mode-toggle");
+        const body = document.body;
+
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+
+        // Chatbot functionality
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+
+        // Toggle chatbot window
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('active');
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        });
+
+        // Chatbot responses
+        const responses = {
+            'hello': 'Hello! How can I help you today? Type "menu" to see all options.',
+            'hi': 'Hi there! What would you like to know about Bhavya? Type "menu" to see all options.',
+            'hey': 'Hey! Feel free to ask me anything about Bhavya. Type "menu" to see all options.',
+            'who': 'Bhavya is a passionate AI/ML student, web developer, and educator.',
+            'about': 'Bhavya is a passionate AI/ML student, web developer, and educator with skills in HTML, CSS, creative web design, and data science.',
+            'skills': 'Bhavya is skilled in AI/ML, Data Science, Python, Web Development (HTML, CSS, JavaScript), and Chess!',
+            'contact': 'You can contact Bhavya through the contact form or connect on LinkedIn, Instagram, or GitHub.',
+            'email': 'You can send Bhavya an email through the contact form on this website.',
+            'linkedin': 'Connect with Bhavya on LinkedIn: https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/',
+            'github': 'Check out Bhavya\'s GitHub: https://github.com/BSS2707/',
+            'instagram': 'Follow Bhavya on Instagram: https://www.instagram.com/bhavyasolanki_07/',
+            'social': 'Follow and like Bhavya on social media:<br>• LinkedIn: <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank" style="color: #05329b; text-decoration: underline;">Connect</a><br>• Instagram: <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" style="color: #05329b; text-decoration: underline;">Follow</a><br>• GitHub: <a href="https://github.com/BSS2707/" target="_blank" style="color: #05329b; text-decoration: underline;">Star</a>',
+            'like': 'Like and follow Bhavya on social media:<br>• LinkedIn: <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank" style="color: #05329b; text-decoration: underline;">Connect</a><br>• Instagram: <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" style="color: #05329b; text-decoration: underline;">Follow</a><br>• GitHub: <a href="https://github.com/BSS2707/" target="_blank" style="color: #05329b; text-decoration: underline;">Star</a>',
+            'follow': 'Follow Bhavya on social media:<br>• LinkedIn: <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank" style="color: #05329b; text-decoration: underline;">Connect</a><br>• Instagram: <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" style="color: #05329b; text-decoration: underline;">Follow</a><br>• GitHub: <a href="https://github.com/BSS2707/" target="_blank" style="color: #05329b; text-decoration: underline;">Star</a>',
+            'resume': 'You can download Bhavya\'s resume using the "Download Resume" button on the home page or click here: <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" target="_blank" style="color: #05329b; text-decoration: underline;">Download Resume</a>',
+            'cv': 'You can download Bhavya\'s CV using the "Download Resume" button on the home page or click here: <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" target="_blank" style="color: #05329b; text-decoration: underline;">Download CV</a>',
+            'download': 'You can download Bhavya\'s resume from the home page or footer. Click here: <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" target="_blank" style="color: #05329b; text-decoration: underline;">Download Resume</a>',
+            'projects': 'Bhavya has worked on various projects including Cricket Match Analyst, E-Commerce Churn Analysis, Bhavya Jarvis, Stock Price Prediction, and more!',
+            'work': 'Bhavya has worked on AI/ML projects, web development, and data science projects. Check the Projects section for details!',
+            'achievement': 'Bhavya achieved First Rank in ChatBot Battle competition and Second Rank in DataDrill competition.',
+            'awards': 'Bhavya has won First Rank in ChatBot Battle and Second Rank in DataDrill competitions.',
+            'hire': 'Interested in hiring Bhavya? Please use the contact form to send a message with your requirements. Bhavya is available for AI/ML projects, web development, and data science work!',
+            'job': 'Looking to hire Bhavya? Send a message through the contact form with your project details. Bhavya is available for freelance and full-time opportunities!',
+            'freelance': 'Yes, Bhavya is available for freelance work in AI/ML, web development, and data science. Use the contact form to discuss your project!',
+            'ask': 'Feel free to ask me anything about Bhavya! You can ask about skills, projects, achievements, how to contact, or how to hire Bhavya.',
+            'more': 'I can tell you about Bhavya\'s skills, projects, achievements, contact information, resume download, or how to hire Bhavya for your project!',
+            'help': 'I can help you learn about Bhavya\'s skills, projects, achievements, contact info, resume, or hiring information. Just ask!',
+            'what': 'Please select an option by typing the number:<br><br>1. About Bhavya<br>2. Skills<br>3. Projects<br>4. Achievements<br>5. Contact Information<br>6. Resume/CV Download<br>7. Hire Bhavya<br>8. Social Media<br>9. Education<br>10. Personal Interests<br><br>Or type a keyword directly!',
+            'options': 'Please select an option by typing the number:<br><br>1. About Bhavya<br>2. Skills<br>3. Projects<br>4. Achievements<br>5. Contact Information<br>6. Resume/CV Download<br>7. Hire Bhavya<br>8. Social Media<br>9. Education<br>10. Personal Interests<br><br>Or type a keyword directly!',
+            'menu': 'Please select an option by typing the number:<br><br>1. About Bhavya<br>2. Skills<br>3. Projects<br>4. Achievements<br>5. Contact Information<br>6. Resume/CV Download<br>7. Hire Bhavya<br>8. Social Media<br>9. Education<br>10. Personal Interests<br><br>Or type a keyword directly!',
+            'python': 'Bhavya is proficient in Python for AI/ML, data science, and web development.',
+            'ai': 'Bhavya specializes in AI and Machine Learning with experience in various ML frameworks.',
+            'ml': 'Bhavya has strong skills in Machine Learning, including supervised and unsupervised learning algorithms.',
+            'web': 'Bhavya is skilled in web development using HTML, CSS, JavaScript, and modern frameworks.',
+            'chess': 'Bhavya is a chess player with 95% skill rating and enjoys strategic thinking.',
+            'cricket': 'Bhavya actively engages in cricket, which strengthens teamwork and analytical thinking.',
+            'education': 'Bhavya is an AI/ML student and educator, passionate about teaching and learning new technologies.',
+            'default': 'I\'m not sure about that. Type "menu" to see all options, or ask about Bhavya\'s skills, projects, contact info, achievements, resume, social media, or how to hire Bhavya!'
+        };
+
+        // Numbered menu options
+        const menuOptions = {
+            '1': 'Bhavya is a passionate AI/ML student, web developer, and educator with skills in HTML, CSS, creative web design, and data science. Alongside technology, Bhavya actively engages in sports, chess, and cricket, which strengthen focus, teamwork, and analytical thinking.',
+            '2': 'Bhavya is skilled in AI/ML, Data Science, Python, Web Development (HTML, CSS, JavaScript), and Chess with a 95% skill rating!',
+            '3': 'Bhavya has worked on various projects including Cricket Match Analyst, E-Commerce Churn Analysis, Bhavya Jarvis, Stock Price Prediction Dashboard, SVM Supervised Learning, and K-Means Unsupervised Learning!',
+            '4': 'Bhavya achieved First Rank in ChatBot Battle competition and Second Rank in DataDrill competition.',
+            '5': 'You can contact Bhavya through the contact form or connect on social media:<br>• LinkedIn: <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank" style="color: #05329b; text-decoration: underline;">Connect</a><br>• Instagram: <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" style="color: #05329b; text-decoration: underline;">Follow</a><br>• GitHub: <a href="https://github.com/BSS2707/" target="_blank" style="color: #05329b; text-decoration: underline;">Star</a>',
+            '6': 'You can download Bhavya\'s resume using the "Download Resume" button on the home page or click here: <a href="assets/cv/Bhavya_Solanki_Resume.pdf" download="Bhavya_Solanki_Resume.pdf" target="_blank" style="color: #05329b; text-decoration: underline;">Download Resume</a>',
+            '7': 'Interested in hiring Bhavya? Please use the contact form to send a message with your requirements. Bhavya is available for AI/ML projects, and data science work for both freelance and full-time opportunities!and aslo the email id is:bhavya.s.solanki777@gmail.com,and also the contact no:+919998106880'  ,
+            '8': 'Follow and like Bhavya on social media:<br>• LinkedIn: <a href="https://www.linkedin.com/in/bhavya-s-solanki-4a3530317/" target="_blank" style="color: #05329b; text-decoration: underline;">Connect</a><br>• Instagram: <a href="https://www.instagram.com/bhavyasolanki_07/" target="_blank" style="color: #05329b; text-decoration: underline;">Follow</a><br>• GitHub: <a href="https://github.com/BSS2707/" target="_blank" style="color: #05329b; text-decoration: underline;">Star</a>',
+            '9': 'Bhavya is an AI/ML student and educator, passionate about teaching and learning new technologies. Always eager to innovate, learn, and inspire through education, AI development, and modern technology.',
+            '10': 'Bhavya actively engages in chess (95% skill rating) and cricket, which strengthen strategic thinking, teamwork, and analytical abilities.'
+        };
+
+        function getBotResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+            
+            // Check for numbered menu options first
+            if (menuOptions[message]) {
+                return menuOptions[message];
+            }
+            
+            // Check for keyword responses - prioritize longer keywords
+            const sortedKeys = Object.keys(responses).sort((a, b) => b.length - a.length);
+            for (const key of sortedKeys) {
+                if (key !== 'default' && message.includes(key)) {
+                    return responses[key];
+                }
+            }
+            return responses['default'];
+        }
+
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = `<p>${text}</p>`;
+            messageDiv.appendChild(contentDiv);
+
+            // Add like button for bot messages
+            if (!isUser) {
+                const likeBtn = document.createElement('button');
+                likeBtn.className = 'message-like-btn';
+                likeBtn.innerHTML = '<i class="bx bx-heart"></i>';
+                likeBtn.onclick = function() {
+                    likeBtn.classList.toggle('liked');
+                    const icon = likeBtn.querySelector('i');
+                    if (likeBtn.classList.contains('liked')) {
+                        icon.classList.remove('bx-heart');
+                        icon.classList.add('bxs-heart');
+                    } else {
+                        icon.classList.remove('bxs-heart');
+                        icon.classList.add('bx-heart');
+                    }
+                };
+                messageDiv.appendChild(likeBtn);
+            }
+
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                chatbotInput.value = '';
+
+                // Simulate bot response delay
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response, false);
+                }, 500);
+            }
+        }
+
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Wire up menu buttons inside the chatbot window
+        function setupChatbotMenu() {
+            const menuBtns = document.querySelectorAll('#chatbot-window .chatbot-menu-btn');
+            menuBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const opt = btn.dataset.option;
+                    // open chatbot window if closed
+                    chatbotWindow.classList.add('active');
+                    // add user message (number)
+                    addMessage(opt, true);
+                    setTimeout(() => {
+                        const response = getBotResponse(opt);
+                        addMessage(response, false);
+                    }, 300);
+                });
+            });
+        }
+
+        // Initialize menu wiring after DOM available
+        setupChatbotMenu();
+    </script>
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    var typed = new Typed("#typed", {
+        strings: [
+            "AI/ML Student.",
+            "AI/ML Developer.",
+            "Data Scientist.",
+            "Web Designer.",
+            "Python Developer.",
+            "Educator.",
+            "Chess Player.",
+            "Cricket Player.",
+            "Streamlit Developer."
+        ],
+typeSpeed: 130,
+        loop: true,
+    });
+</script>
 
 </html>
